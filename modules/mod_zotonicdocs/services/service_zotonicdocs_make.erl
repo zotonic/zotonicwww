@@ -30,7 +30,6 @@
 
 process_post(_ReqData, Context) ->
     OurToken = m_config:get_value(mod_zotonicdocs, webhook_token, Context),
-    lager:warning("OurToken: ~p", [OurToken]),
     case z_context:get_q("token", Context) of
         undefined ->
             {error, access_denied, "Missing token"};
