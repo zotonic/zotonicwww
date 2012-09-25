@@ -1,0 +1,3 @@
+[
+ {zotonicdocs, ["docs", '*'], resource_static_pages, [{root, "files/zotonicdocs/zotonic/doc/_build/html"}]}
+].
