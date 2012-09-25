@@ -122,5 +122,5 @@ ensure_checkout(RootDir, Context) ->
     end.
 
 make_html(RootDir, Context) ->
-    os:cmd("cd " ++ z_utils:os_escape(filename:join(RootDir, "zotonic/doc")) ++ " && make html"),
+    os:cmd("cd " ++ z_utils:os_escape(filename:join(RootDir, "zotonic/doc")) ++ " && make stubs html"),
     ?zInfo("Documentation built.", Context).
