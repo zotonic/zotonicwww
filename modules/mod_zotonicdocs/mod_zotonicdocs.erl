@@ -102,28 +102,25 @@ code_change(_OldVsn, State, _Extra) ->
 
 do_make(Context) ->
     Root = root(Context),
-    ensure_checkout(Root),
-    make_html(Root),
+    ensure_checkout(Root, Context),
+    make_html(Root, Context),
     ok.
-
 
 root(Context) ->
     z_path:files_subdir_ensure("zotonicdocs", Context).
 
-
-ensure_checkout(RootDir) ->
+ensure_checkout(RootDir, Context) ->
     case filelib:is_dir(filename:join(RootDir, "zotonic/.git")) of
         true ->
-            lager:warning("Doing pull"),
-            R = os:cmd("cd " ++ z_utils:os_escape(filename:join(RootDir, "zotonic")) ++ " && git reset --hard && git pull"),
-            lager:warning("R: ~p", [R]),
-            nop;
+            ?zInfo("Updating zotonic", Context),
+            os:cmd("cd " ++ z_utils:os_escape(filename:join(RootDir, "zotonic")) ++ " && git reset --hard && git pull"),
+            ?zInfo("Update done.", Context);
         false ->
-            lager:warning("Doing checkout in: ~p", [RootDir]),
-            R = os:cmd("cd " ++ z_utils:os_escape(RootDir) ++ " && git clone git://github.com/zotonic/zotonic.git"),
-            lager:warning("R: ~p", [R])
+            ?zInfo("Doing checkout in: " ++ RootDir, Context),
+            os:cmd("cd " ++ z_utils:os_escape(RootDir) ++ " && git clone git://github.com/zotonic/zotonic.git"),
+            ?zInfo("Checkout done.", Context)
     end.
 
-make_html(RootDir) ->
-    R = os:cmd("cd " ++ z_utils:os_escape(filename:join(RootDir, "zotonic/doc")) ++ " && make html"),
-    lager:warning("R: ~p", [R]).
+make_html(RootDir, Context) ->
+    os:cmd("cd " ++ z_utils:os_escape(filename:join(RootDir, "zotonic/doc")) ++ " && make html"),
+    ?zInfo("Documentation built.", Context).
