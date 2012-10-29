@@ -104,6 +104,7 @@ do_make(Context) ->
     Root = root(Context),
     ensure_checkout(Root, Context),
     make_html(Root, Context),
+    make_edocs(Root, Context),
     ok.
 
 root(Context) ->
@@ -123,4 +124,8 @@ ensure_checkout(RootDir, Context) ->
 
 make_html(RootDir, Context) ->
     os:cmd("cd " ++ z_utils:os_escape(filename:join(RootDir, "zotonic/doc")) ++ " && make stubs html"),
-    ?zInfo("Documentation built.", Context).
+    ?zInfo("sphinx docs built.", Context).
+
+make_edocs(RootDir, Context) ->
+    os:cmd("cd " ++ z_utils:os_escape(filename:join(RootDir, "zotonic")) ++ " && make edocs"),
+    ?zInfo("edocs built.", Context).
