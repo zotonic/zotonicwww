@@ -26,6 +26,6 @@
     {archives_m,["archives", year, month],	controller_template,	[ {template, "archives.tpl"}, {cat, article} ]},
     
     %% Generated edocs
-    {chatlogs,		["doc", 'chatlogs'],          controller_static_pages, [ {root, "chatlogs"}, {allow_directory_index, true} ]},
-    {edoc,			["edoc", '*'],          controller_static_pages, [ {root, "edoc"} ]}
+    {chatlogs,	["chatlogs", '*'],          controller_static_pages, [ {root, "chatlogs"}, {allow_directory_index, true} ]},
+    {edoc,		["edoc", '*'],              controller_static_pages, [ {root, "edoc"} ]}
 ].
