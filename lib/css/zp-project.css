@@ -207,6 +207,10 @@ header {
 	margin: 0 0 48px 0;
 }
 
+.home header {
+	margin: 0;
+}
+
 #content-area {
 	margin: 0 0 18px 0;
 }
