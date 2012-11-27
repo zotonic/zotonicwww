@@ -34,8 +34,11 @@
 			{% endwith %}
 
             {{ m.rsc[id].body|show_media }}
-		</div>
 
+            {% block below_body %}
+            {% endblock %}
+		</div>
+        
         {% block below_content %}
         {% endblock %}
 
