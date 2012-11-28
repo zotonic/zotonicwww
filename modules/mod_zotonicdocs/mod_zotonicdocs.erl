@@ -123,7 +123,7 @@ ensure_checkout(RootDir, Context) ->
     end.
 
 make_html(RootDir, Context) ->
-    os:cmd("cd " ++ z_utils:os_escape(filename:join(RootDir, "zotonic/doc")) ++ " && make clean stubs html"),
+    os:cmd("cd " ++ z_utils:os_escape(filename:join(RootDir, "zotonic/doc")) ++ " && make clean stubs production-html"),
     ?zInfo("sphinx docs built.", Context).
 
 make_edocs(RootDir, Context) ->
