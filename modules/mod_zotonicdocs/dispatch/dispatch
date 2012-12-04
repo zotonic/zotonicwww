@@ -1,3 +1,4 @@
 [
- {zotonicdocs, ["docs", '*'], controller_static_pages, [{root, "files/zotonicdocs/zotonic/doc/_build/html"}]}
+ {zotonic_docs_redirect, ["docs"], controller_redirect, [{url, "/docs/latest/index.html"}]},
+ {zotonicdocs_latest,    ["docs", "latest", '*'], controller_static_pages, [{root, "files/zotonicdocs/zotonic/doc/_build/html"}]}
 ].
