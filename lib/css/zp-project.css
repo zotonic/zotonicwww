@@ -591,8 +591,8 @@ figure.image-wrapper {
     margin-left: 0;
 }
 
-article.blogentry {
-    margin-bottom: 18px;
+div.blogitem {
+    margin-bottom: 48px;
 }
 
 p.meta {
