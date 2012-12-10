@@ -127,5 +127,5 @@ make_html(RootDir, Context) ->
     ?zInfo("sphinx docs built.", Context).
 
 make_edocs(RootDir, Context) ->
-    os:cmd("cd " ++ z_utils:os_escape(filename:join(RootDir, "zotonic")) ++ " && make edocs"),
+    os:cmd("cd " ++ z_utils:os_escape(filename:join(RootDir, "zotonic")) ++ " && make edoc"),
     ?zInfo("edocs built.", Context).

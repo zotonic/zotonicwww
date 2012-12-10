@@ -1,4 +1,14 @@
 [
- {zotonic_docs_redirect, ["docs"], controller_redirect, [{url, "/docs/latest/index.html"}]},
- {zotonicdocs_latest,    ["docs", "latest", '*'], controller_static_pages, [{root, "files/zotonicdocs/zotonic/doc/_build/html"}]}
+ %% Generated edocs
+ {edoc,	["edoc", '*'],
+  controller_static_pages, [ {root, "files/zotonicdocs/zotonic/doc/_build/edoc"},
+                             {allow_directory_index, true} ]},
+
+ %% User docs
+ {zotonic_docs_redirect, ["docs"],
+  controller_redirect, [{url, "/docs/latest/index.html"}]},
+ 
+ {zotonicdocs_latest,    ["docs", "latest", '*'],
+  controller_static_pages, [{root, "files/zotonicdocs/zotonic/doc/_build/html"}]}
+
 ].
