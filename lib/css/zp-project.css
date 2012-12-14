@@ -770,6 +770,13 @@ table {
 }
 
 
+/* Reset some atatonic css so that bootstrap forms work */
+
+label {
+	float: none;
+	width: auto;
+}
+
 /* Load of bootstrap css for displaying survey forms correctly */
 
 form {
