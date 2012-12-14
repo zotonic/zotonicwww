@@ -777,6 +777,10 @@ label {
 	width: auto;
 }
 
+a.button, button {
+	float: none;
+}
+
 /* Load of bootstrap css for displaying survey forms correctly */
 
 form {
