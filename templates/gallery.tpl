@@ -23,7 +23,9 @@
 									<p class="summary">{{ m.rsc[c_id].summary }}</p>
 								{% endif %}
 								{% if m.rsc[c_id].depiction %}
-									{% image m.rsc[c_id].depiction width=450 lossless %}
+                                <a href="{% image_url c_id.depiction width=800 lossless %}" title="{{ c_id.title }}" rel="lightbox[gallery]">
+								    {% image c_id.depiction width=450 lossless %}
+                                </a>
 								{% endif %}
 							</li>
 							{% endfor %}

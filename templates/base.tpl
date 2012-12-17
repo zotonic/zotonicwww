@@ -16,6 +16,7 @@
 		"css/zp-compressed.css"
 		"css/zp-project.css"
 	%}
+    <link href="/lib/lightbox/css/lightbox.css" rel="stylesheet" />
 
 	<!--[if IE]>
 	{% lib	"css/zp-ie.css" %}

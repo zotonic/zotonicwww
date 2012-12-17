@@ -5,6 +5,9 @@
 	"js/modules/livevalidation-1.3.js"
 	"js/modules/z.inputoverlay.js"
 %}
+{% lib
+    "lightbox/js/lightbox.js"
+%}
 
 {% script %}
 
