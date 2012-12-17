@@ -9,6 +9,8 @@
     {page,      ["page", id, slug],         controller_page,  [ {template, {cat, "page.tpl"}} ]},
     {page,      ["page", id],		        controller_page,  [ {template, {cat, "page.tpl"}} ]},
 
+    {website,      ["website", id, slug],	controller_website_redirect,  []},
+
     {collection,["collection", id],         controller_page,  [ {template, "collection.tpl"} ]},
     {collection,["collection", id, slug],   controller_page,  [ {template, "collection.tpl"} ]},
     {manual,    ["manual", id],             controller_page,  [ {template, "manual.tpl"} ]},
