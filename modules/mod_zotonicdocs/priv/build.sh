@@ -14,6 +14,7 @@ cd $ZOTONIC
 for branch in $DOCBRANCHES; do
     pretty=`echo $branch|sed 's/master/latest/'|sed 's/release-//'|sed 's/\.x//'`
     git co $branch;
+    git merge origin/$branch
     cd doc
     builddir="_build/$pretty"
     mkdir -p $builddir
