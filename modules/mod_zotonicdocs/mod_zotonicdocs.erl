@@ -101,16 +101,20 @@ code_change(_OldVsn, State, _Extra) ->
 %%====================================================================
 
 do_make(Context) ->
-    Root = root(Context),
-    ensure_checkout(Root, Context),
-    make_html(Root, Context),
-    make_edocs(Root, Context),
+    ensure_checkout(Context),
+    make_html(Context),
+    make_edocs(Context),
     ok.
 
-root(Context) ->
+checkout_dir(Context) ->
     z_path:files_subdir_ensure("zotonicdocs", Context).
 
-ensure_checkout(RootDir, Context) ->
+docs_dir(Context) ->
+    z_path:files_subdir_ensure("docs", Context).
+
+
+ensure_checkout(Context) ->
+    RootDir = checkout_dir(Context),
     case filelib:is_dir(filename:join(RootDir, "zotonic/.git")) of
         true ->
             ?zInfo("Updating zotonic", Context),
@@ -122,10 +126,18 @@ ensure_checkout(RootDir, Context) ->
             ?zInfo("Checkout done.", Context)
     end.
 
-make_html(RootDir, Context) ->
-    os:cmd("cd " ++ z_utils:os_escape(filename:join(RootDir, "zotonic/doc")) ++ " && make stubs production-html"),
+make_html(Context) ->
+    RootDir = checkout_dir(Context),
+
+    Dir = proplists:get_value(?MODULE, z_module_manager:scan(Context)),
+    os:cmd("bash " ++ z_utils:os_escape(filename:join(Dir, "priv/build.sh"))
+           ++ " " ++ z_utils:os_escape(filename:join(RootDir, "zotonic"))
+           ++ " " ++ z_utils:os_escape(docs_dir(Context))
+           ++ " > /tmp/doc-build.txt"
+          ),
     ?zInfo("sphinx docs built.", Context).
 
-make_edocs(RootDir, Context) ->
+make_edocs(Context) ->
+    RootDir = checkout_dir(Context),
     os:cmd("cd " ++ z_utils:os_escape(filename:join(RootDir, "zotonic")) ++ " && make edocs"),
     ?zInfo("edocs built.", Context).

@@ -6,9 +6,12 @@
 
  %% User docs
  {zotonic_docs_redirect, ["docs"],
-  controller_redirect, [{url, "/docs/latest/index.html"}]},
+  controller_redirect, [{url, "/docs/0.9/index.html"}]},
  
  {zotonicdocs_latest,    ["docs", "latest", '*'],
-  controller_static_pages, [{root, "files/zotonicdocs/zotonic/doc/_build/html"}]}
+  controller_static_pages, [{root, "files/docs/latest/html"}]},
+
+ {zotonicdocs_09,        ["docs", "0.9", '*'],
+  controller_static_pages, [{root, "files/docs/0.9/html"}]}
 
 ].
