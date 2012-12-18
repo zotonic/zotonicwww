@@ -86,6 +86,7 @@ p {
 
 	p.summary {
         color: black;
+	    margin: 0 0 18px 0;
 	}
 
 	#sidebar p {
