@@ -15,7 +15,7 @@
             </a>
 		</section>
 		<section id="docs-zotonic">
-			<a href="/documentation" title=""><img src="/lib/images/docs.png" alt="" />
+			<a href="/docs" title=""><img src="/lib/images/docs.png" alt="" />
                 <span class="header">Zotonic documentation</span>
                 <span class="subheader">{_ Read about getting up to speed fast _}</span>
             </a>
