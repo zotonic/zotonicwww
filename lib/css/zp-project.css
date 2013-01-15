@@ -216,9 +216,10 @@ header {
 	margin: 0 0 18px 0;
 }
 
-#content-area article.zp-67 iframe {
-    /* embed tag */
-    width: 520px !important; 
+#content-area article.zp-67 section.video-wrapper iframe {
+    /* embed tag,  16:9 */
+    width: 540px !important; 
+    width: 303px !important; 
 }
 
 
