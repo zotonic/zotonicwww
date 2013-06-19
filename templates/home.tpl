@@ -47,10 +47,15 @@
         <h2><a href="{{ m.rsc[id].page_url }}">{{ m.rsc[id].short_title }} &raquo;</a></h2>
         <p>
             <a href="{{ m.rsc[id].page_url }}">{% image m.rsc[id].o.haspart|first width=320 %}</a>
-            <a href="{{ m.rsc[id].page_url }}">{% image m.rsc[id].o.haspart|tail|first width=320 %}</a>
         </p>
         {% endwith %}
 
+        {% with m.rsc['zotonic_sites'].id as id %}
+        <h2><a href="{{ m.rsc[id].page_url }}">{{ m.rsc[id].short_title }} &raquo;</a></h2>
+        <p>
+            <a href="{{ m.rsc[id].page_url }}">{% image m.rsc[id].o.haspart|first width=320 %}</a>
+        </p>
+        {% endwith %}
 	</aside>
 
 {% endblock %}
