@@ -1,8 +1,8 @@
-        <section>
-        <div>
+        <div class="zp-100">
              <a href="#" id="toggle_btn">Show as list</a>
              {% wire id="toggle_btn" text="Show as List" action={update target="panel" template="_zotonic_sites_1_col.tpl" id=id} %}
         </div>
+        <section>
         {% for c_ids in m.rsc[id].o.haspart|split_in:2 %}
 		<section class="zp-50">
 			{% for c_id in c_ids %}

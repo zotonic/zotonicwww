@@ -4,6 +4,11 @@
 #toggle_btn {
    float: right;
 }
+a#toggle_btn:hover {
+   color: #0778B0;
+   text-decoration: none;
+   border-bottom: 0px;
+}
 .pad_left_20 {
    padding-left: 20px;
 }

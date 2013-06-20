@@ -1,4 +1,4 @@
-        <div>
+        <div class="zp-100">
             <a href="#" id="toggle_btn">Show 2 columns</a>
             {% wire id="toggle_btn" text="Show as List" action={update target="panel" template="_zotonic_sites_2_col.tpl" id=id} %}
         </div>
