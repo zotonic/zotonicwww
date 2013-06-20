@@ -7,9 +7,6 @@
 		<section class="zp-50">
 			{% for c_id in c_ids %}
 				{% if c_id %}
-                                        {% if m.rsc[c_id].summary %}
-                                                <p class="summary">{{ m.rsc[c_id].summary }}</p>
-                                        {% endif %}
                                         {% if m.rsc[c_id].depiction %}
 					<h2><a href="{{c_id.website}}" target="new_{{ c_id.id}}">{{ c_id.title }}</a></h2>
                                         <div>
@@ -28,12 +25,18 @@
                                         {% endif %}
                                         <div class="condensed" id="spotlight" style="margin-bottom: 60px;padding-top: 5px;">
                                             <p><a href="{{ c_id.website }}" target="new_{{c_id.id}}">{{ c_id.website }}</a></p>
-                                            {{ c_id.body }}
+	                                        {% if m.rsc[c_id].summary %}
+                                                <p class="summary">{{ m.rsc[c_id].summary }}</p>
+    	                                    {% endif %}
+
+        	                                {{ c_id.body }}
+											{% if c_id.o.subject %}											   
                                             <p>Tags:
                                             {% for kw in c_id.o.subject %}
                                                 <span class="label label-info">{{ kw.title }}</span>
                                             {% endfor %}
                                             </p>
+											{% endif %}
 					</div>
                 		{% endif %}
         		{% endfor %}
