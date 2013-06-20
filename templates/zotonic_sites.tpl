@@ -49,8 +49,21 @@ img.spotlight {
 {% endblock %}
 
 {% block content %}
+        <article id="content">
+                <div class="padding">
+                        <h1>{{ m.rsc[id].title }}</h1>
+                        {% if m.rsc[id].summary %}<p class="summary">{{ m.rsc[id].summary }}</p>{% endif %}
+                        {{ m.rsc[id].body }}
+                </div>
+        </article>
+        {% if m.rsc[id].o.haspart|first %}
 	<div id="panel">
 		{% include "_zotonic_sites_2_col.tpl" %}
 	</div>
+        {% else %}
+	<div id="panel">
+		<h2>Coming Soon!</h2>	
+	</div>
+        {% endif %}
 
 {% endblock %}

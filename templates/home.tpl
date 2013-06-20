@@ -51,10 +51,16 @@
         {% endwith %}
 
         {% with m.rsc['zotonic_sites'].id as id %}
-        <h2><a href="{{ m.rsc[id].page_url }}">{{ m.rsc[id].short_title }} &raquo;</a></h2>
-        <p>
-            <a href="{{ m.rsc[id].page_url }}">{% image m.rsc[id].o.haspart|first width=320 %}</a>
-        </p>
+            {% with m.rsc[id].o.haspart|first as spotlight %}
+                {% if spotlight %}
+                    <h2><a href="{{ m.rsc[id].page_url }}">{{ m.rsc[id].short_title }} &raquo;</a></h2>
+                    <p><a href="{{ m.rsc[id].page_url }}">{% image m.rsc[id].o.haspart|first width=320 %}</a></p>
+                {% else %}
+                    <h2>{{ m.rsc[id].short_title }} &raquo;</h2>
+                    <h3>Coming Soon!</h3>
+                {% endif %}
+                </p>
+            {% endwith %}
         {% endwith %}
 	</aside>
 

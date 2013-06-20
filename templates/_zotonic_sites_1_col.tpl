@@ -1,13 +1,7 @@
-        <article id="content">
-                <div class="padding">
-                        <h1>{{ m.rsc[id].title }}</h1>
-                        {% if m.rsc[id].summary %}<p class="summary">{{ m.rsc[id].summary }}</p>{% endif %}
-                        {{ m.rsc[id].body }}
-                        <a href="#" id="toggle_btn">Show 2 columns</a>
-                        {% wire id="toggle_btn" text="Show as List" action={update target="panel" template="_zotonic_sites_2_col.tpl" id=id} %}
-                </div>
-        </article>
-
+        <div>
+            <a href="#" id="toggle_btn">Show 2 columns</a>
+            {% wire id="toggle_btn" text="Show as List" action={update target="panel" template="_zotonic_sites_2_col.tpl" id=id} %}
+        </div>
         <section>
         {% for c_id in m.rsc[id].o.haspart %}
                 {% if c_id %}
