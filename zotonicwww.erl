@@ -23,7 +23,7 @@
 -mod_title("Zotonic Web Site").
 -mod_description("The Zotonic web site.").
 -mod_prio(10).
--mod_schema(1).
+-mod_schema(2).
 
 -export([manage_schema/2]).
 
@@ -55,4 +55,20 @@ manage_schema(install, _) ->
               {summary, <<"Read about the latest developments of Zotonic here.">>}]
             }
            ]
-          }.
+          };
+
+manage_schema({upgrade, 2}, _) ->
+        #datamodel{
+            categories =
+            [
+                {spotlight, text, [{title, <<"Spotlight">>}]}
+            ],
+            resources =
+            [
+             {zotonic_sites,
+              collection,
+              [{title, <<"Sites built with Zotonic">>},
+               {short_title, <<"Sites built with Zotonic">>},
+               {page_path, <<"/zotonic-sites">>},
+               {summary, <<"We are happy to present some of the excellent sites created using Zotonic.">>}]
+             }]}. 
