@@ -69,6 +69,6 @@ manage_schema({upgrade, 2}, _) ->
               collection,
               [{title, <<"Sites built with Zotonic">>},
                {short_title, <<"Sites built with Zotonic">>},
-               {page_path, <<"/zotonic-sites">>},
+               {page_path, <<"/showcase">>},
                {summary, <<"We are happy to present some of the excellent sites created using Zotonic.">>}]
              }]}. 
