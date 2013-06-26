@@ -12,10 +12,10 @@ a#toggle_btn:hover {
 .pad_left_20 {
    padding-left: 20px;
 }
-
-.condensed {
-   line-height: 1em;
+.spotlight_copy {
+   font: 14px/24px "Lucida Grande", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
 .label,
 .badge {
   display: inline-block;

@@ -22,8 +22,10 @@
                                                          </a>
                                                    </div>
                                               {% endfor %}
+                                        {% else %}
+                                            <h2>No picture available</h2>
                                         {% endif %}
-                                        <div class="condensed" id="spotlight" style="margin-bottom: 60px;padding-top: 5px;">
+                                        <div class="spotlight_copy" id="spotlight" style="margin-bottom: 60px;padding-top: 5px;padding-right: 60px;">
                                             <p><a href="{{ c_id.website }}" target="new_{{c_id.id}}">{{ c_id.website }}</a></p>
 	                                        {% if m.rsc[c_id].summary %}
                                                 <p class="summary">{{ m.rsc[c_id].summary }}</p>

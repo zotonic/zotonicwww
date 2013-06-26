@@ -18,12 +18,14 @@
                                                                     title="{{ c_id.title }}" rel="lightbox[gallery-{{c_id}}]">
                                                            </a>
                                                         </div>
-                                                        {% endfor %}
-                                                {% endif %}
+                                                {% endfor %}
+                                        {% else %}
+                                            <h2>No picture available</h2>
+                                        {% endif %}
                                 </section>
                                 <section class="zp-50">
                                         <h2 class="pad_left_20"><a href="{{c_id.website}}" target="new_{{ c_id.id}}">{{ c_id.title }}</a></h2>
-                                        <div class="pad_left_20 condensed">
+                                        <div class="spotlight_copy pad_left_20">
                                             <p><a href="{{ c_id.website }}" target="new_{{c_id.id}}">{{ c_id.website }}</a></p>
 	                                        {% if m.rsc[c_id].summary %}
                                                 <p class="summary">{{ m.rsc[c_id].summary }}</p>

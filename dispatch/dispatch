@@ -4,7 +4,7 @@
     {home,      [],                         controller_page,  [ {template, "home.tpl"}, {id, page_home} ]},
     {features,  ["features"],               controller_page,  [ {template, "features.tpl"}, {id, page_features} ]},
     {team,      ["zotonic-team"],           controller_page,  [ {template, "zotonic_team.tpl"}, {id, zotonic_team} ]},
-    {z_sites,   ["zotonic-sites"],          controller_page,  [ {template, "zotonic_sites.tpl"}, {id, zotonic_sites} ]},
+    {showcase,  ["showcase"],               controller_page,  [ {template, "zotonic_sites.tpl"}, {id, zotonic_sites} ]},
 
     {article,   ["blog", id, slug],         controller_page,  [ {template, {cat, "page.tpl"}} ]},
     {page,      ["page", id, slug],         controller_page,  [ {template, {cat, "page.tpl"}} ]},
