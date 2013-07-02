@@ -10,7 +10,7 @@
                                         {% if m.rsc[c_id].depiction %}
                                                 <a href="{% image_url c_id.depiction width=960 lossless %}"
                                                           title="{{ c_id.title }}" rel="lightbox[gallery-{{c_id}}]">
-                                                   {% image c_id.depiction mediaclass="spotlight1" class="spotlight"%}
+                                                          {% image c_id.depiction mediaclass="spotlight1" class="spotlight" lossless %}
                                                 </a>
                                                 {% for img in m.rsc[c_id].media|tail %}
                                                         <div style="display: none">

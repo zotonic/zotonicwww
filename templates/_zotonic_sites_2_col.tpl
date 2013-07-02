@@ -12,7 +12,7 @@
                                         <div>
                                                 <a href="{% image_url c_id.depiction width=960 lossless %}" 
                                                             title="{{ c_id.title }}" rel="lightbox[gallery-{{c_id}}]">
-                                                            {% image c_id.depiction mediaclass="spotlight2" class="spotlight" %}
+                                                            {% image c_id.depiction mediaclass="spotlight2" class="spotlight" lossless %}
                                                 </a>
 					</div>
                                               {% for img in m.rsc[c_id].media|tail %}
