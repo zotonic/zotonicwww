@@ -63,7 +63,7 @@ img.spotlight {
         </article>
         {% if m.rsc[id].o.haspart|first %}
 	<div id="panel">
-		{% include "_zotonic_sites_2_col.tpl" %}
+		{% include "_zotonic_sites_1_col.tpl" %}
 	</div>
         {% else %}
 	<div id="panel">
