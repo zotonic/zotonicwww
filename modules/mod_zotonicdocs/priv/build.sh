@@ -13,7 +13,7 @@ cd $ZOTONIC
 
 for branch in $DOCBRANCHES; do
     pretty=`echo $branch|sed 's/master/latest/'|sed 's/release-//'|sed 's/\.x//'`
-    (cd doc; make clean)
+    git clean -f -x
     git co $branch;
     git merge origin/$branch
     cd doc
