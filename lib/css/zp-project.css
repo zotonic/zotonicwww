@@ -25,7 +25,7 @@ limitations under the License.
 body {
 	background: #fff url(../images/page_bg.jpg) repeat-x left top;
 	color: #333;
-	font: 14px/22px "Lucida Grande", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font: 14px/22px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 	body.home {
@@ -47,12 +47,12 @@ h1 {
 	margin: 0 0 6px 0;
 	font-style: normal;
 	color: #0778B0;
-	font-family: "Lucida Grande", Arial, Helvetica, sans-serif;
+	font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
 	text-shadow: 1px 1px #fff;
 }
 
 h2 {
-	font-family: "Lucida Grande", Arial, Helvetica, sans-serif;
+	font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
 	font-weight: normal;
 	color: #0778B0;
 	font-style: normal;
@@ -102,7 +102,7 @@ p.intro:first-letter {
 	float: none;
 	padding: 0;
 	width: auto;
-	font-family: "Lucida Grande", Arial, Helvetica, sans-serif;
+	font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 p.important:first-line,
@@ -1829,4 +1829,5 @@ input[type="submit"].btn.btn-mini {
   *padding-top: 1px;
   *padding-bottom: 1px;
 }
+
 
