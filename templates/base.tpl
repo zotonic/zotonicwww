@@ -38,6 +38,8 @@
         })();
     /* ]]> */
     </script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "c29b8e79-73dc-4965-866a-69f0cc21cc97", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 </head>
 <body class="{% block page_class %}{% endblock %}">
 
