@@ -8,7 +8,7 @@
 	</div>
 
 	<div class="zp-33">
-		<p>zotonic.com &copy; 2009–2011</p>
+		<p>zotonic.com &copy; 2009–2014</p>
 		
 		<p>
 		    <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://zotonic.com/"></a>
