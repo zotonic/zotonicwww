@@ -550,7 +550,7 @@ div#logon_box input[type=text], div#logon_box input[type=password] {
 	}
 	
 		.last-feature {
-			margin: 0;
+			margin-bottom: 0;
 		}
 
 .pager li {
