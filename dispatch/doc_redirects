@@ -1,5 +1,6 @@
 [
 
+{r0, ["documentation"], controller_redirect, [{url, "/docs/latest/index.html"}, {is_permanent, true}]},
 {r1, ["template-filters"], controller_redirect, [{url, "/docs/latest/ref/filters/index.html"}, {is_permanent, true}]},
 {r2, ["category", "511", "validation"], controller_redirect, [{url, "/docs/latest/ref/validators/index.html"}, {is_permanent, true}]},
 {r3, ["category", "508", "scomp"], controller_redirect, [{url, "/docs/latest/ref/scomps/index.html"}, {is_permanent, true}]},
