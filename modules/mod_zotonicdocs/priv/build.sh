@@ -22,6 +22,11 @@ for branch in $DOCBRANCHES; do
     BUILDDIR=$builddir make -e clean stubs production-html
     #BUILDDIR=$builddir make -e production-html
     cd ..
+    builddir="_build/$pretty/html/edoc/"
+    mkdir -p $builddir
+    make edocs
+    mv doc/_build/edoc/core $builddir/
+    mv doc/_build/edoc/modules $builddir/
 done
 
 rsync -uva --delete $ZOTONIC/doc/_build/ $TARGET
