@@ -103,7 +103,6 @@ code_change(_OldVsn, State, _Extra) ->
 do_make(Context) ->
     ensure_checkout(Context),
     make_html(Context),
-    make_edocs(Context),
     ok.
 
 checkout_dir(Context) ->
@@ -136,8 +135,3 @@ make_html(Context) ->
            ++ " > /tmp/doc-build.txt"
           ),
     ?zInfo("sphinx docs built.", Context).
-
-make_edocs(Context) ->
-    RootDir = checkout_dir(Context),
-    os:cmd("cd " ++ z_utils:os_escape(filename:join(RootDir, "zotonic")) ++ " && make edocs"),
-    ?zInfo("edocs built.", Context).
