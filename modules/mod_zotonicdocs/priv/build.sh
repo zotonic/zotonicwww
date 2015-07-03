@@ -7,7 +7,8 @@ ZOTONIC="$1"
 TARGET="$2"
 
 # which branches to build documentation for
-DOCBRANCHES="release-0.10.x release-0.11.x release-0.12.x release-0.13.x master"
+# DOCBRANCHES="release-0.10.x release-0.11.x release-0.12.x release-0.13.x master"
+DOCBRANCHES="release-0.13.x master"
 
 cd $ZOTONIC
 
