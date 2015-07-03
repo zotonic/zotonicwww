@@ -12,7 +12,7 @@
   controller_static_pages, [{root, "files/docs/latest/html"}]},
 
  {zotonicdocs_13,        ["docs", "0.13", '*'],
-  controller_static_pages, [{root, "files/docs/0.12/html"}]},
+  controller_static_pages, [{root, "files/docs/0.13/html"}]},
 
  {zotonicdocs_12,        ["docs", "0.12", '*'],
   controller_static_pages, [{root, "files/docs/0.12/html"}]},
