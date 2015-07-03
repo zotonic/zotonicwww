@@ -17,13 +17,16 @@
  {zotonicdocs_12,        ["docs", "0.12", '*'],
   controller_static_pages, [{root, "files/docs/0.12/html"}]},
 
-{zotonicdocs_11,        ["docs", "0.11", '*'],
+ {zotonicdocs_11,        ["docs", "0.11", '*'],
   controller_static_pages, [{root, "files/docs/0.11/html"}]},
   
  {zotonicdocs_10,        ["docs", "0.10", '*'],
   controller_static_pages, [{root, "files/docs/0.10/html"}]},
 
  {zotonicdocs_09,        ["docs", "0.9", '*'],
-  controller_redirect, [{dispatch, zotonicdocs_latest}, {qargs, ['star']}, {is_permanent, true}]}
+  controller_redirect, [{dispatch, zotonicdocs_latest}, {is_permanent, true}]}
+
+% {zotonicdocs_09,        ["docs", "0.9", '*'],
+%  controller_redirect, [{dispatch, zotonicdocs_latest}, {qargs, ['star']}, {is_permanent, true}]}
 
 ].
