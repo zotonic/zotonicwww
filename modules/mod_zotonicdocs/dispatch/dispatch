@@ -24,7 +24,7 @@
   controller_static_pages, [{root, "files/docs/0.10/html"}]},
 
  {zotonicdocs_09,        ["docs", "0.9", '*'],
-  controller_redirect, [{dispatch, zotonicdocs_latest}, {is_permanent, true}]}
+  controller_redirect, [{dispatch, zotonic_docs_redirect}, {is_permanent, true}]}
 
 % {zotonicdocs_09,        ["docs", "0.9", '*'],
 %  controller_redirect, [{dispatch, zotonicdocs_latest}, {qargs, ['star']}, {is_permanent, true}]}
