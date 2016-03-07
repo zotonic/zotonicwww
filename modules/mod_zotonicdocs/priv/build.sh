@@ -8,12 +8,13 @@ TARGET="$2"
 
 # which branches to build documentation for
 # DOCBRANCHES="release-0.10.x release-0.11.x release-0.12.x release-0.13.x master"
-DOCBRANCHES="release-0.13.x master"
+# DOCBRANCHES="release-0.13.x master"
+DOCBRANCHES="release-0.x master"
 
 cd $ZOTONIC
 
 for branch in $DOCBRANCHES; do
-    pretty=`echo $branch|sed 's/master/latest/'|sed 's/release-//'|sed 's/\.x//'`
+    pretty=`echo $branch|sed 's/master/latest/'|sed 's/release-//'`
     git clean -f -x
     git checkout -f $branch;
     git merge origin/$branch
