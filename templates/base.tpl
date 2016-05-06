@@ -83,5 +83,6 @@
 	{% include "_js_include.tpl" %}
 
 	{% all include "_html_body.tpl" %}
+    {% block post %}{% endblock %}
 </body>
 </html>
