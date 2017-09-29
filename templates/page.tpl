@@ -49,11 +49,13 @@
 		<section id="comments">
 			{% include "_comments.tpl" id=id %}
 		</section>
+		{#
 		<section id="share-this">
 		       <span class='st_facebook_hcount' displayText='Facebook'></span>
 		       <span class='st_twitter_hcount' displayText='Tweet'></span>
 		       <span class='st_googleplus_hcount' displayText='Google +'></span>
 		</section>
+		#}
 	</article>
 
 {% endblock %}
